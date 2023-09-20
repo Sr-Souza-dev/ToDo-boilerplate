@@ -5,6 +5,7 @@ import { AppRouterSwitch } from './AppRouterSwitch';
 
 import { fixedMenuLayoutStyle } from './FixedMenuLayoutStyle';
 import { ILayoutProps } from '/imports/typings/BoilerplateDefaultTypings';
+import { isMobile } from '/imports/libs/deviceVerify';
 import Box from '@mui/material/Box';
 import { AppTopMenu } from './components/AppTopMenu';
 
@@ -16,7 +17,7 @@ interface FixedMenuLayoutContextType {
 export const FixedMenuLayoutContext = createContext({} as FixedMenuLayoutContextType);
 
 export const FixedMenuLayout = (props: ILayoutProps) => {
-	const { isMobile, theme } = props;
+	const { theme } = props;
 
 	const [showAppBar, setShowAppBar] = useState<boolean>(true);
 
@@ -36,8 +37,7 @@ export const FixedMenuLayout = (props: ILayoutProps) => {
 						...fixedMenuLayoutStyle.containerAppRouter,
 						backgroundColor: theme.palette.background.default
 					}}>
-					<AppTopMenu {...props} />
-
+					{showAppBar && <AppTopMenu {...props} />}
 					{showAppBar && !isMobile && <AppNavBar {...props} />}
 					<Box sx={fixedMenuLayoutStyle.routerSwitch}>
 						<AppRouterSwitch {...props} />

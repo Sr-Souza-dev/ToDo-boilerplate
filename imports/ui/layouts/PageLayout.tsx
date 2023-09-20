@@ -115,7 +115,7 @@ export const PageLayout = (props: IPageLayout) => {
 						justifyContent: 'flex-start',
 						width: '100%',
 						flex: 1,
-						padding: 8,
+						padding: {xs: 2, sm: 5},
 						backgroundColor: theme.palette.background.default
 					}}>
 					{children}

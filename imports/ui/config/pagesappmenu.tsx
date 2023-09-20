@@ -3,13 +3,13 @@ import { isMobile } from '/imports/libs/deviceVerify';
 import Home from '@mui/icons-material/Home';
 
 export const pagesMenuItemList = [
-    isMobile
-        ? {
-              path: '/',
-              name: 'Home',
-              icon: <Home />,
-          }
-        : null,
+
+    // {
+    //     path: '/',
+    //     name: 'Home',
+    //     icon: <Home />,
+    // },
+
     // {
     //   path: '/signin',
     //   name: 'SingIn',

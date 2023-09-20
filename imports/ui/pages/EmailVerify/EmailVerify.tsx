@@ -3,7 +3,7 @@ import { Accounts } from 'meteor/accounts-base';
 import { useParams } from 'react-router-dom';
 import { IDefaultContainerProps } from '/imports/typings/BoilerplateDefaultTypings';
 
-let emailVerified = false;
+let emailVerified = true;
 
 export const EmailVerify = (props: IDefaultContainerProps) => {
     const { token } = useParams();

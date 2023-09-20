@@ -10,12 +10,12 @@ import { SignIn } from '../pages/SignIn/Signin';
 import { PasswordRecovery } from '../pages/RecoveryPassword/PasswordRecovery';
 
 export const pagesRouterList = [
-	{
-		path: '/',
-		exact: true,
-		component: Home,
-		isProtected: false
-	},
+	// {
+	// 	path: '/',
+	// 	exact: true,
+	// 	component: Home,
+	// 	isProtected: true
+	// },
 	{
 		path: '/signin',
 		component: SignIn,

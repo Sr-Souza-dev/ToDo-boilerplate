@@ -10,7 +10,7 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { appTopMenuStyle } from './AppTopMenuStyle';
 
 export const AppTopMenu = (props: ILayoutProps) => {
-	const { user, showDrawer, showWindow, theme, themeOptions } = props;
+	const { user, showDrawer, themeOptions } = props;
 
 	const navigate = useNavigate();
 	const [anchorEl, setAnchorEl] = useState<Object | null>(null);
@@ -24,11 +24,6 @@ export const AppTopMenu = (props: ILayoutProps) => {
 	const viewProfile = () => {
 		handleClose();
 		showDrawer && showDrawer({ title: 'Usuário', url: `/userprofile/view/${user._id}` });
-	};
-
-	const viewProfileMobile = () => {
-		handleClose();
-		showWindow && showWindow({ title: 'Usuário', url: `/userprofile/view/${user._id}` });
 	};
 
 	const handleMenu = (event: React.SyntheticEvent) => {
@@ -64,58 +59,15 @@ export const AppTopMenu = (props: ILayoutProps) => {
 							themeOptions?.setDarkThemeMode(evt.target.checked);
 						}}
 					/>
-					<Box
-						sx={{
-							display: 'flex',
-							flexDirection: 'row',
-							alignItems: 'center',
-							border: '1px solid #CCC',
-							color: theme.palette.primary.main
-						}}>
-						<Button
-							variant={'contained'}
-							color={'secondary'}
-							sx={{
-								minWidth: 15,
-								minHeight: 15,
-								width: 15,
-								height: 15,
-								maxWidth: 15,
-								maxHeight: 15
-							}}
-							onClick={() => themeOptions?.setFontScale(themeOptions?.fontScale * 0.85)}>
-							{'-'}
-						</Button>
-						{'F'}
-						<Button
-							variant={'contained'}
-							color={'secondary'}
-							sx={{
-								minWidth: 15,
-								minHeight: 15,
-								width: 15,
-								height: 15,
-								maxWidth: 15,
-								maxHeight: 15
-							}}
-							onClick={() => themeOptions?.setFontScale(themeOptions?.fontScale * 1.15)}>
-							{'+'}
-						</Button>
-					</Box>
-				</Box>
+				</Box> 
 				<Button
-					aria-label="account of current user"
-					aria-controls="menu-appbar"
-					aria-haspopup="true"
 					onClick={handleMenu}
-					color="inherit"
-					id="Perfil"
 					sx={appTopMenuStyle.containerAccountCircle}>
 					<>
-						<AccountCircle id="Perfil" name="Perfil" style={appTopMenuStyle.accountCircle} />
+						<AccountCircle id="Perfil" name="Perfil" sx={appTopMenuStyle.accountCircle} />
 						<ArrowDropDownIcon
-							style={{
-								color: theme.palette.primary.main,
+							sx={{
+								color: "primary",
 								width: 17
 							}}
 						/>
@@ -128,12 +80,16 @@ export const AppTopMenu = (props: ILayoutProps) => {
 						vertical: 'top',
 						horizontal: 'right'
 					}}
+					sx={{
+						color: "red"
+					}}
 					keepMounted
 					transformOrigin={{
 						vertical: 'top',
 						horizontal: 'right'
 					}}
 					open={open}
+
 					onClose={handleClose}>
 					{!user || !user._id
 						? [

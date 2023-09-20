@@ -20,7 +20,7 @@ const UserProfileDetail = ({ screenState, loading, user, save, navigate, hiddenT
 			title={
 				screenState === 'view' ? 'Visualizar usuário' : screenState === 'edit' ? 'Editar Usuário' : 'Criar usuário'
 			}
-			onBack={() => navigate('/userprofile')}
+			// onBack={() => navigate('/userprofile')}
 			hiddenTitleBar={!!hiddenTitleBar}>
 			<SimpleForm
 				mode={screenState}

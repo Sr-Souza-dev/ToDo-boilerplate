@@ -17,17 +17,17 @@
 import React from 'react';
 
 /////////////////////////////////////////////// Paleta de cores do prototipo de alta /////////////////////////////////
-const primary = '#5a9902';
+const primary = '#0070FF';
 const onPrimary = '#FFFFFF';
-const primaryContainer = '#9DE4D6';
-const onPrimaryContainer = '#034944';
-const primaryOnHover = 'rgba(0, 126, 122, 0.1)';
+const primaryContainer = '#E5F9FF';
+const onPrimaryContainer = '#0070FF';
+const primaryOnHover = 'rgba(0, 112, 255, 0.1)';
 
-const secondary = '#2182C0';
-const onSecondary = '#034944';
-const secondaryContainer = '#FFDD99';
-const onSecondaryContainer = '#034944';
-const secondaryOnHover = 'rgba(236, 177, 31, 0.2)';
+const secondary = '#FF8000';
+const onSecondary = '#FFFFFF';
+const secondaryContainer = '#F0F0F0';
+const onSecondaryContainer = '#FF8000';
+const secondaryOnHover = 'rgba(255, 128, 0, 0.2)';
 
 const error = '#B30501';
 const onError = '#FFFFFF';
@@ -50,7 +50,7 @@ const surfaceVariant = '#DAE5E3';
 const onSurfaceVariant = '#303030';
 const outline = '#6F7978';
 
-//cinzas
+// Cinzas
 const preto = '#000000';
 const cinza10 = '#1C1C1C';
 const cinza20 = '#282828';
@@ -64,7 +64,7 @@ const cinza90 = '#E6E7E8';
 const cinza95 = '#EFF1F0';
 const cinza98 = '#F7FBF9';
 
-//primarias
+// Primárias
 const aquaVale = '#0ABB98';
 const amareloVale = '#ECB11F';
 const cerejaVale = '#C0305E';
@@ -74,7 +74,7 @@ const cinzaEscuro = '#555555';
 const branco = '#FFFFFF';
 const verdeVale = '#007E7A';
 
-//secundarias
+// Secundárias
 const verdeEscuro = '#034944';
 const aquaClaro = '#9DE4D6';
 const azulEscuro = '#2626D1';
@@ -83,20 +83,20 @@ const cerejaEscuro = '#991310';
 const cerejaClaro = '#E191C5';
 const cinzaClaro = '#E6E7E8';
 const cinzaMedio = '#BCBEC0';
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 const darkPalette = {
-	primary: '#307000',
-	onPrimary: '#000000',
-	primaryContainer: '#034944',
-	onPrimaryContainer: '#9DE4D6',
-	primaryOnHover: 'rgba(10, 187, 152, 0.1)',
+	primary: '#000000',
+	onPrimary: '#FFFFFF',
+	primaryContainer: '#111111',
+	onPrimaryContainer: '#FFFFFF',
+	primaryOnHover: 'rgba(0, 0, 0, 0.1)',
 
-	secondary: '#0272BA',
-	onSecondary: '#000000',
-	secondaryContainer: '#034944',
-	onSecondaryContainer: '#ECB11F',
-	secondaryOnHover: 'rgba(255, 221, 153, 0.2)',
+	secondary: '#FF8000',
+	onSecondary: '#FFFFFF',
+	secondaryContainer: '#222222',
+	onSecondaryContainer: '#FF8000',
+	secondaryOnHover: 'rgba(255, 128, 0, 0.2)',
 
 	error: '#F7C0BF',
 	onError: '#000000',

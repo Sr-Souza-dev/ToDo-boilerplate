@@ -15,7 +15,7 @@ import { Box, Container } from '@mui/material';
 export const PasswordRecovery = (props: IDefaultContainerProps) => {
 	const { showNotification, navigate } = props;
 
-	const { handleExibirAppBar, handleOcultarAppBar } = useContext(FixedMenuLayoutContext);
+	const { handleOcultarAppBar } = useContext(FixedMenuLayoutContext);
 
 	const handleSubmit = (doc: { email: string }) => {
 		const { email } = doc;
@@ -51,15 +51,14 @@ export const PasswordRecovery = (props: IDefaultContainerProps) => {
 
 	useEffect(() => {
 		handleOcultarAppBar();
-		return () => handleExibirAppBar();
 	}, []);
 
 	return (
-		<Container style={passwordRecoveryStyle.containerRecoveryPassword}>
-			<h2 style={passwordRecoveryStyle.labelAccessSystem}>
-				<img src="/images/wireframe/logo.png" style={passwordRecoveryStyle.imageLogo} />
-				{'Acessar o sistema'}
-			</h2>
+		<Container style={passwordRecoveryStyle.containerRecoveryPassword} sx={{my:4}}>
+			<Box sx={passwordRecoveryStyle.labelAccessSystem} style={{marginBottom: 40}}>
+				<img src="/images/wireframe/profile.png" style={passwordRecoveryStyle.imageLogo} />
+				Acessar o sistema
+			</Box>
 			<SimpleForm
 				schema={{
 					email: { type: 'String', label: 'Email', optional: false }
@@ -67,10 +66,10 @@ export const PasswordRecovery = (props: IDefaultContainerProps) => {
 				onSubmit={handleSubmit}>
 				<TextField label="Email" icon="user" name="email" type="email" placeholder="Digite seu email" />
 				<Box sx={passwordRecoveryStyle.containerButtonOptions}>
-					<Button color={'secondary'} onClick={() => navigate('/signin')}>
+					<Button color={'secondary'} onClick={() => navigate('/signin')} variant='outlined'>
 						Voltar
 					</Button>
-					<Button id="submit" color={'primary'} variant={'outlined'}>
+					<Button id="submit" color={'primary'} variant={'contained'}>
 						Recuperar a senha
 					</Button>
 				</Box>

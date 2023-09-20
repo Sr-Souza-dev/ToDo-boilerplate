@@ -48,6 +48,7 @@ export class ApiBase<Doc extends IDoc> {
 
 		//**GETS **
 		this.getSchema = this.getSchema.bind(this);
+	
 		this.getCollectionInstance = this.getCollectionInstance.bind(this);
 		this.countDocuments = this.countDocuments.bind(this);
 
@@ -90,6 +91,7 @@ export class ApiBase<Doc extends IDoc> {
 			// ####################################
 		}
 	}
+
 
 	initCollection(apiName: string) {
 		const self = this;
@@ -218,7 +220,7 @@ export class ApiBase<Doc extends IDoc> {
 		docObj: any,
 		callback = (e: IMeteorError, r: any) => {
 			console.log(e, r);
-		}
+		} 
 	) {
 		const newObj: { [key: string]: any } = { _id: docObj._id };
 		const schema = this.schema;

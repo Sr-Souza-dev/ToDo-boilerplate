@@ -16,7 +16,7 @@ import { Box } from '@mui/material';
 export const ResetPassword = (props: IDefaultContainerProps) => {
 	const { showNotification, navigate } = props;
 
-	const { handleExibirAppBar, handleOcultarAppBar } = useContext(FixedMenuLayoutContext);
+	const { handleOcultarAppBar, handleExibirAppBar } = useContext(FixedMenuLayoutContext);
 
 	const { token } = useParams();
 

@@ -122,6 +122,7 @@ export default ({
 					name={name}
 					label={otherProps.rounded ? label : null}
 					type={'text'}
+					
 				/>
 			</div>
 		);

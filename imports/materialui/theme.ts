@@ -531,6 +531,7 @@ const getLightTheme = (props: { fontScale: number; isMobile: boolean }): IThemeO
 					root: {
 						padding: '0.5rem 1.5rem',
 						color: appStyles.primary,
+						backgroundColor: appStyles.branco,
 						gap: '.5rem',
 						...appStyles.labelLarge(fontScale),
 						'&:hover': {

@@ -13,9 +13,9 @@ export const userProfileRouterList: IRoute[] = [
         component: UserProfileContainer,
         isProtected: true,
     },
-    {
-        path: '/userprofile',
-        component: UserProfileContainer,
-        isProtected: true,
-    },
+    // {
+    //     path: '/userprofile',
+    //     component: UserProfileContainer,
+    //     isProtected: true,
+    // },
 ];

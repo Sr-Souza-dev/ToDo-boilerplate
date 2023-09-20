@@ -17,7 +17,7 @@
 const signinStyle = {
 	containerSignIn: {
 		width: '100%',
-		maxWidth: 400
+		maxWidth: 400,
 	},
 	subContainerSignIn: {
 		display: 'flex',
@@ -35,13 +35,14 @@ const signinStyle = {
 	imageLogo: {
 		backgroundColor: '#ff9937',
 		maxWidth: 100,
-		borderRadius: 30,
+		borderRadius: 50,
 		padding: 5
 	},
 	containerButtonOptions: {
 		display: 'flex',
 		flexDirection: 'row',
-		justifyContent: 'space-between'
+		justifyContent: 'space-between',
+		color: 'black'
 	},
 	containerSocialLoginButton: {
 		width: '100%',

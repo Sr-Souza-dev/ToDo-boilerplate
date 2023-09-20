@@ -17,9 +17,20 @@
 export const appTopMenuStyle = {
 	containerAccountCircle: {
 		display: 'flex',
-		flexDirection: 'row'
+		flexDirection: 'row',
+		fontWeight: 'normal',
+		fontStretch: 'normal',
+		fontStyle: 'normal',
+		lineHeight: 1.2,
+		letterSpacing: '0.55px',
+		textAlign: 'left',
+		color: '#ffffff',
+		textTransform: 'none',
+		"&:hover": {
+			backgroundColor: 'primary.dark',
+		}
 	},
 	accountCircle: {
-		color: '#3e6b01'
+		color: 'primary'
 	}
 };

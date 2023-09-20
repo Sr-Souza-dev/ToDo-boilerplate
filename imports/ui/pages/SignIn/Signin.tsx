@@ -24,7 +24,7 @@ export const SignIn = (props: ISignIn) => {
 
 	const location = useLocation();
 
-	const { handleExibirAppBar, handleOcultarAppBar } = useContext(FixedMenuLayoutContext);
+	const { handleOcultarAppBar, handleExibirAppBar } = useContext(FixedMenuLayoutContext);
 
 	const { showNotification, navigate, user } = props;
 
@@ -113,92 +113,96 @@ export const SignIn = (props: ISignIn) => {
 	}, [location.pathname]);
 
 	return (
-		<>
-			<Container sx={{ width: '100%', maxWidth: 400 }}>
-				<Box
-					sx={{
-						display: 'flex',
-						flexDirection: 'column',
-						justifyContent: 'center',
-						alignItems: 'center'
-					}}>
-					<Box>
-						<h2 style={signinStyle.labelAccessSystem}>
-							<img src="/images/wireframe/logo.png" style={signinStyle.imageLogo} />
-							<span>Acessar o sistema</span>
-						</h2>
-						<SimpleForm
-							schema={{
-								email: { type: 'String', label: 'Email', optional: false },
-								password: { type: 'String', label: 'Senha', optional: false }
-							}}
-							onSubmit={handleSubmit}>
-							<Box>
-								<TextField label="Email" fullWidth={true} name="email" type="email" placeholder="Digite seu email" />
-								<TextField
-									label="Senha"
-									fullWidth={true}
-									name="password"
-									placeholder="Digite sua senha"
-									type="password"
-								/>
-								<Box sx={signinStyle.containerButtonOptions}>
-									<Button id="forgotPassword" color={'secondary'} onClick={() => navigate('/password-recovery')}>
-										Esqueci a minha senha
-									</Button>
-									<Button id="submit" variant={'outlined'} color={'primary'}>
-										Entrar
-									</Button>
-								</Box>
+		<Container sx={{ width: '100%', maxWidth: 400, my: 4,}}>
+			<Box
+				sx={{
+					display: 'flex',
+					flexDirection: 'column',
+					justifyContent: 'center',
+					alignItems: 'center'
+				}}>
+				<Box>
+			
+					<span style={signinStyle.labelAccessSystem}>
+						<img src="/images/wireframe/profile.png" style={signinStyle.imageLogo} />
+						Login
+					</span>
+					
+					<SimpleForm
+						schema={{
+							email: { type: 'String', label: 'Email', optional: false },
+							password: { type: 'String', label: 'Senha', optional: false }
+						}}
+						onSubmit={handleSubmit}>
+						<Box>
+							<TextField label="Email" fullWidth={true} name="email" type="email" placeholder="Digite seu email" sx={{marginBottom: 2}}/>
+							<TextField
+								label="Senha"
+								fullWidth={true}
+								name="password"
+								placeholder="Digite sua senha"
+								type="password"
+							/>
+							<Button id="forgotPassword" variant={'text'} color={'secondary'} onClick={() => navigate('/password-recovery')}>
+								Esqueci a minha senha
+							</Button>
+							<Box sx={signinStyle.containerButtonOptions}>
 							</Box>
-						</SimpleForm>
-						<Box style={signinStyle.containerRouterSignUp}>
-							<Button id="newUser" color={'secondary'} onClick={() => navigate('/signup')}>
-								É novo por aqui? Clique aqui para se cadastrar!
+							<Button id="submit" variant='contained' color={'primary'} sx={{width: '80%', margin: 'auto', display: 'flex'}}>
+								Entrar
 							</Button>
 						</Box>
-						<Box
-							key="loginoptions"
-							style={{
-								paddingRight: 5,
-								width: '102%',
-								margin: 0,
-								padding: 0,
-								display: 'flex',
-								flexDirection: 'column'
-							}}>
-							<Box key="divBtnGoogle" sx={{ width: '100%' }}>
-								<SocialLoginButton
-									key="btnGoogle"
-									iconClass={'google icon'}
-									onLogin={loginGoogle}
-									buttonText={'Login pelo Google'}
-									iconOnly={false}
-									customCss={{
-										background: '#dd4b39',
-										width: '100%',
-										cursor: 'pointer'
-									}}
-								/>
-							</Box>
-							<Box key="divBtnFaceboook" style={{ width: '100%' }}>
-								<SocialLoginButton
-									key="btnFaceboook"
-									iconClass={'facebook icon'}
-									onLogin={loginFacebook}
-									buttonText={'Login pelo Facebook'}
-									iconOnly={false}
-									customCss={{
-										background: '#3B5998',
-										width: '100%',
-										cursor: 'pointer'
-									}}
-								/>
-							</Box>
-						</Box>
+					</SimpleForm>
+					<Box style={signinStyle.containerRouterSignUp}>
+						<span>
+							É novo por aqui?
+							<Button id="newUser" variant='text' color={'secondary'} onClick={() => navigate('/signup')}>
+								Clique aqui 
+							</Button>
+							para se cadastrar!
+						</span>
 					</Box>
+					{/* <Box
+						key="loginoptions"
+						style={{
+							paddingRight: 5,
+							width: '102%',
+							margin: 0,
+							padding: 0,
+							display: 'flex',
+							flexDirection: 'column'
+						}}>
+						<Box key="divBtnGoogle" sx={{ width: '100%' }}>
+							<SocialLoginButton
+								key="btnGoogle"
+								iconClass={'google icon'}
+								onLogin={loginGoogle}
+								buttonText={'Login pelo Google'}
+								iconOnly={false}
+								customCss={{
+									background: '#dd4b39',
+									width: '100%',
+									cursor: 'pointer'
+								}}
+							/>
+						</Box>
+						<Box key="divBtnFaceboook" style={{ width: '100%' }}>
+							<SocialLoginButton
+								key="btnFaceboook"
+								iconClass={'facebook icon'}
+								onLogin={loginFacebook}
+								buttonText={'Login pelo Facebook'}
+								iconOnly={false}
+								customCss={{
+									background: '#3B5998',
+									width: '100%',
+									cursor: 'pointer'
+								}}
+							/>
+						</Box>
+					</Box> */}
 				</Box>
-			</Container>
-		</>
+			</Box>
+		</Container>
 	);
 };

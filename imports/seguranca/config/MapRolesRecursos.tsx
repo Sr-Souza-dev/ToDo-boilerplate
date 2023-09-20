@@ -1,4 +1,4 @@
-import { Recurso as Exemplo } from '/imports/modules/example/config/Recursos';
+import { TaskRecursos } from '/imports/modules/toDos/config/recursos';
 
 import { RoleType } from '/imports/seguranca/config/RoleType';
 
@@ -25,16 +25,16 @@ function obterStringsEnum(enumValue: { [s: number]: string | number }): [string]
  */
 export const mapRolesRecursos: MapRolesRecursos = {
     [RoleType.ADMINISTRADOR]: [
-        Exemplo.EXAMPLE_VIEW,
-        Exemplo.EXAMPLE_CREATE,
-        Exemplo.EXAMPLE_UPDATE,
-        Exemplo.EXAMPLE_REMOVE,
+        TaskRecursos.VIEW,
+        TaskRecursos.CREATE,
+        TaskRecursos.EDIT,
+        TaskRecursos.DELETE,
     ],
     [RoleType.USUARIO]: [
-        Exemplo.EXAMPLE_VIEW,
-        Exemplo.EXAMPLE_CREATE,
-        Exemplo.EXAMPLE_UPDATE,
-        Exemplo.EXAMPLE_REMOVE,
+        TaskRecursos.VIEW,
+        TaskRecursos.CREATE,
+        TaskRecursos.EDIT,
+        TaskRecursos.DELETE,
     ],
     [RoleType.PUBLICO]: [],
 };

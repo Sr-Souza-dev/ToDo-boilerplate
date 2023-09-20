@@ -98,10 +98,9 @@ export default ({
 					))}
 				</div>
 			) : (
-				<div className="checkboxContainer" style={{ display: 'flex', alignItems: 'center' }}>
+				<div className="checkboxContainer" style={{ display: 'flex', alignItems: 'center', alignContent: 'center' }}>
 					<Checkbox checked={!!valueFormatter(value)} name={label} onChange={handleChange} disabled={readOnly} />
-
-					<Typography variant="body1"> {label} </Typography>
+					<SimpleLabelView label={label} disabled={readOnly} />
 				</div>
 			)}
 		</div>
